@@ -15,13 +15,17 @@ class School
   def add_student(name, grade)
     #creates an instance variable that holds the value of argument 'name'
     @student_name = name 
+    
     #creates an instance variable that holds the value of argument 'grade'
     @grade = grade
+    
     #executes if hash does not include a key of the current grade
     if @roster.include?(grade) == false
+      
     #creates a new key with a name of current grade a value of an empty array
       @roster[grade] = []
     end
+    
     #adds current student to respective grade
     @roster[grade] << name
   end 
